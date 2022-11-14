@@ -1,0 +1,17 @@
+t=2022-11-11T18:51:46+0000 lvl=info msg="Starting ERP system v3" service="ERP Main"
+tokenstr: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJlbWFpbCI6ImJhcmlAZ21haWwuY29tIiwiZXhwIjoxNjY4MTkyNzExLCJyb2xlIjoiQURNSU4ifQ.vr-xejudDUOH6vUXh5hyt7FXUX-Q7_tV2owVBQ7N_BMt=2022-11-11T18:51:46+0000 lvl=info msg="Successfully connected!" service="Postgres DB"
+t=2022-11-11T18:51:46+0000 lvl=info msg="Starting rest server" service="Rest Server"
+t=2022-11-11T18:52:13+0000 lvl=dbug msg="login: Request[{UserID:admin UserHash:8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918}]" service="Rest Server"
+t=2022-11-11T18:52:13+0000 lvl=dbug msg="GetUserRoleAndNameDB Query:[%s]" service="Postgres DB" admin=nil LOG15_ERROR="Normalized odd number of arguments by adding nil"
+tokenstr: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJlbWFpbCI6ImFkbWluIiwiZXhwIjoxNjY4MTkyNzM4LCJyb2xlIjoiQURNSU4ifQ.TKNWkhtbD1dBwl7HmkPvWrufxPHjYQeDUvrmKdXr0r8t=2022-11-11T18:52:13+0000 lvl=dbug msg="WriteSuccessMessage: {UserRole:ADMIN UserName:Barinder Tokken:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJlbWFpbCI6ImFkbWluIiwiZXhwIjoxNjY4MTkyNzM4LCJyb2xlIjoiQURNSU4ifQ.TKNWkhtbD1dBwl7HmkPvWrufxPHjYQeDUvrmKdXr0r8}" service="Rest Server"
+t=2022-11-11T19:04:00+0000 lvl=info msg="Starting ERP system v3" service="ERP Main"
+tokenstr: %s eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJlbWFpbCI6IkFETUlOIiwiZXhwIjoxNjY4MTkzNDQ1LCJyb2xlIjoiQURNSU4ifQ.CRgZ2iiC9QjlUn2DuVG0ponp1OSKpUaNGLcn2HFmVqE
+true map[authorized:true email:ADMIN exp:1.668193445e+09 role:ADMIN] ADMIN
+t=2022-11-11T19:04:00+0000 lvl=info msg="Successfully connected!" service="Postgres DB"
+t=2022-11-11T19:04:00+0000 lvl=info msg="Starting rest server" service="Rest Server"
+t=2022-11-11T19:05:50+0000 lvl=info msg="Starting ERP system v3" service="ERP Main"
+tokenstr: %s eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJlbWFpbCI6IkFETUlOIiwiZXhwIjoxNjY4MTkzNTU1LCJyb2xlIjoiQURNSU4ifQ.TNMWW10KiJ-NU9tBt8vrtBhd_qfSlp-Kh6fN2tosRWQ
+false map[authorized:true email:ADMIN exp:1.668193555e+09 role:ADMIN] ADMIN
+t=2022-11-11T19:05:56+0000 lvl=info msg="Successfully connected!" service="Postgres DB"
+t=2022-11-11T19:05:56+0000 lvl=info msg="Starting rest server" service="Rest Server"
+t=2022-11-11T19:50:34+0000 lvl=info msg="Starting ERP system v3" service="ERP Main"
