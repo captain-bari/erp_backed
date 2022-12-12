@@ -19,4 +19,19 @@ type (
 		UserName string `json:"userName,omitempty"`
 		Tokken   string `json:"tokken,omitempty"`
 	}
+
+	//For getting Materials
+	Material struct {
+		ID         int      `json:"id,omitempty"`
+		Name       string   `json:"name,omitempty"`
+		Type       string   `json:"type,omitempty"`
+		Properties []string `json:"userID,omitempty"`
+		Processes  []string `json:"processes,omitempty"`
+		Purchage   []string `json:"purchase,omitempty"`
+		Sell       []string `json:"sell,omitempty"`
+	}
+
+	GetMaterialsResp struct {
+		Materials []Material `json:"materials,omitempty"`
+	}
 )

@@ -28,6 +28,7 @@ func Init() error {
 	mux.HandleFunc("/hello", hello)
 	mux.HandleFunc("/headers", headers)
 	mux.HandleFunc("/v1/login", login)
+	mux.HandleFunc("/v1/getmaterials", getMaterials)
 
 	handler := cors.Handler(mux)
 	// err := http.ListenAndServeTLS(":8090", "/app/cert.pem", "/app/key_open.pem", handler)

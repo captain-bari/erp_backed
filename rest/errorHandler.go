@@ -20,6 +20,7 @@ type errorResponse struct {
 const (
 	ErrorInvalid ErrorType = iota
 	InternalError
+	TokkenNotFound
 	RequestReadError
 	AuthcontextNotFound
 	RequestUnmarshallError
@@ -43,6 +44,12 @@ var errorMap map[ErrorType]errorResponse = map[ErrorType]errorResponse{
 		ErrorDescription: "The request is malformed, a required parameter is missing or a parameter has an invalid value :  Request body read error",
 	},
 
+	TokkenNotFound: {
+		ErrorCode:        http.StatusBadRequest,
+		Error:            "tokken_not_found",
+		ErrorDescription: "The request is malformed, tokken not found",
+	},
+
 	InternalError: {
 		ErrorCode:        http.StatusBadRequest,
 		Error:            "internal_server_error",
@@ -64,7 +71,7 @@ var errorMap map[ErrorType]errorResponse = map[ErrorType]errorResponse{
 	AuthcontextNotFound: {
 		ErrorCode:        http.StatusForbidden,
 		Error:            "invalid_request",
-		ErrorDescription: "The request is malformed: Authcontext is NULL, Cre Entterprise unmarshall Error",
+		ErrorDescription: "The request is malformed: Failed to authenticate user",
 	},
 
 	RequestUnmarshallError: {

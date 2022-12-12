@@ -15,7 +15,7 @@ var key []byte
 func GenerateJWT(email, role string) (string, error) {
 
 	if len(key) == 0 {
-		b, err := os.ReadFile("/app/key_open.pem")
+		b, err := os.ReadFile("./key_open.pem")
 		if err != nil {
 			log.Logger.Errorln(err)
 		}
