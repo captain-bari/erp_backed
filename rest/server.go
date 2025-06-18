@@ -1,7 +1,7 @@
 package rest
 
 import (
-	log "erp/log"
+	"erp/log"
 	"net/http"
 
 	"github.com/rs/cors"
@@ -9,7 +9,7 @@ import (
 
 func Init() error {
 
-	log.Logger.Info("Starting rest server")
+	log.Info("Starting rest server")
 
 	mux := http.NewServeMux()
 
@@ -38,7 +38,7 @@ func Init() error {
 	// }
 	err := http.ListenAndServe(":8090", handler)
 	if err != nil {
-		log.Logger.Errorf("WebInterface: ListenAndServe: %s", err.Error())
+		log.Errorf("WebInterface: ListenAndServe: %s", err.Error())
 		return err
 	}
 	return nil

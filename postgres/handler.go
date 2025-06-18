@@ -8,12 +8,12 @@ import (
 
 func GetUserRoleAndNameDB(id, hash string) (role, name string, noRow bool, err error) {
 
-	log.Logger.Debugf("GetUserRoleAndNameDB Query:[%s]", applyArgs(GetUserRoleAndName, id, hash))
+	log.Debugf("GetUserRoleAndNameDB Query:[%s]", applyArgs(GetUserRoleAndName, id, hash))
 
 	rows, err := DBclient.Query(GetUserRoleAndName, id, hash)
 	if err != nil {
 		err = fmt.Errorf("db: GetUserRoleAndNameDB row query ERROR[%s]", err.Error())
-		log.Logger.Error(err.Error())
+		log.Error(err.Error())
 		return
 	}
 
@@ -21,7 +21,7 @@ func GetUserRoleAndNameDB(id, hash string) (role, name string, noRow bool, err e
 		err = rows.Scan(&role, &name)
 		if err != nil {
 			err = fmt.Errorf("db: GetUserRoleAndNameDB row scan ERROR[%s]", err.Error())
-			log.Logger.Error(err.Error())
+			log.Error(err.Error())
 			return
 		}
 	}
@@ -35,12 +35,12 @@ func GetUserRoleAndNameDB(id, hash string) (role, name string, noRow bool, err e
 
 func GetMaterialsDB() (resp []types.Material, err error) {
 
-	log.Logger.Debugf("GetUserRoleAndNameDB Query:[%s]", applyArgs(GetMaterials))
+	log.Debugf("GetUserRoleAndNameDB Query:[%s]", applyArgs(GetMaterials))
 
 	rows, err := DBclient.Query(GetMaterials)
 	if err != nil {
 		err = fmt.Errorf("db: GetUserRoleAndNameDB row query ERROR[%s]", err.Error())
-		log.Logger.Error(err.Error())
+		log.Error(err.Error())
 		return
 	}
 
@@ -49,7 +49,7 @@ func GetMaterialsDB() (resp []types.Material, err error) {
 		err = rows.Scan(&m.ID, &m.Type, &m.Name, &m.Properties, &m.Processes, &m.Purchage, &m.Sell)
 		if err != nil {
 			err = fmt.Errorf("db: GetUserRoleAndNameDB row scan ERROR[%s]", err.Error())
-			log.Logger.Error(err.Error())
+			log.Error(err.Error())
 			return
 		}
 		resp = append(resp, m)

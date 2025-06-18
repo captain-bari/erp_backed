@@ -149,7 +149,7 @@ func writeError(w http.ResponseWriter, r *http.Request, code int, errresp interf
 	w.WriteHeader(code)
 	b, err := json.Marshal(errresp)
 	if err != nil {
-		log.Logger.Error(fmt.Sprintf("Error in marshaling JSON resp err[%s]", err.Error()))
+		log.Errorf(fmt.Sprintf("Error in marshaling JSON resp err[%s]", err.Error()))
 		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
 		return
 	}
@@ -159,12 +159,12 @@ func writeError(w http.ResponseWriter, r *http.Request, code int, errresp interf
 func WriteSuccessMessage(w http.ResponseWriter, r *http.Request, code int, data interface{}) {
 	b, err := json.Marshal(data)
 	if err != nil {
-		log.Logger.Error(fmt.Sprintf("Error in marshaling JSON resp err[%s]", err.Error()))
+		log.Errorf(fmt.Sprintf("Error in marshaling JSON resp err[%s]", err.Error()))
 		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
 		return
 	}
 
-	log.Logger.Debugf("WriteSuccessMessage: %+v", data)
+	log.Debugf("WriteSuccessMessage: %+v", data)
 
 	w.Header().Set("Content-Type", "application/json;")
 	w.Header().Set("Access-Control-Allow-Origin", "*")

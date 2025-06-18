@@ -29,19 +29,19 @@ func Init() error {
 
 	db, err := sql.Open("postgres", psqlInfo)
 	if err != nil {
-		log.Logger.Errorf("Open: ERROR[%s]", err.Error())
+		log.Errorf("Open: ERROR[%s]", err.Error())
 		return err
 	}
 
 	err = db.Ping()
 	if err != nil {
-		log.Logger.Errorf("Ping: ERROR[%s]", err.Error())
+		log.Errorf("Ping: ERROR[%s]", err.Error())
 		return err
 	}
 
 	DBclient = db
 
-	log.Logger.Info("Successfully connected!")
+	log.Info("Successfully connected!")
 	return nil
 }
 

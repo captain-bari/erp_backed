@@ -17,7 +17,7 @@ func GenerateJWT(email, role string) (string, error) {
 	if len(key) == 0 {
 		b, err := os.ReadFile("./key_open.pem")
 		if err != nil {
-			log.Logger.Errorln(err)
+			log.Errorln(err)
 		}
 		key = b
 	}
@@ -35,7 +35,7 @@ func GenerateJWT(email, role string) (string, error) {
 
 	tokenString, err := token.SignedString(key)
 	if err != nil {
-		log.Logger.Errorf("something Went Wrong: %s", err.Error())
+		log.Errorf("something Went Wrong: %s", err.Error())
 		return "", err
 	}
 

@@ -1,7 +1,8 @@
 version: '3.7'
 services:
     web:
-        build: .
+        build:
+          dockerfile: dockerfile
         restart: always
         logging:
           options:
@@ -10,3 +11,5 @@ services:
         network_mode: "host"
         volumes:
           - ./logs/:/app/log/
+        ports:
+          - "8090:8090"
