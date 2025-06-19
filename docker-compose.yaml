@@ -1,6 +1,7 @@
 version: '3.7'
 services:
     web:
+        platform: linux/amd64 #for mac silicon
         build:
           dockerfile: dockerfile
         restart: always
@@ -8,7 +9,7 @@ services:
           options:
             max-size: 10m
             max-file: "3"
-        network_mode: "host"
+        # network_mode: "host" we are mapping port no need
         volumes:
           - ./logs/:/app/log/
         ports:
