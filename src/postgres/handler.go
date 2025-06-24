@@ -1,8 +1,8 @@
 package postgres
 
 import (
-	log "erp/log"
-	types "erp/types"
+	log "erp/src/log"
+	types "erp/src/types"
 	"fmt"
 )
 

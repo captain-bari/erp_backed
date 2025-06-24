@@ -1,8 +1,8 @@
 package auth
 
 import (
-	log "erp/log"
-	"erp/postgres"
+	log "erp/src/log"
+	"erp/src/postgres"
 )
 
 func AuthenticateUser(userID, userHash string) (notFound bool, name, role string, err error) {

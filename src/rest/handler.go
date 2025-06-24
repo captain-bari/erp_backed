@@ -1,9 +1,9 @@
 package rest
 
 import (
-	auth "erp/Auth"
-	"erp/postgres"
-	types "erp/types"
+	auth "erp/src/Auth"
+	"erp/src/postgres"
+	types "erp/src/types"
 
 	"encoding/json"
 	log "erp/log"
