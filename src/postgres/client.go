@@ -2,7 +2,7 @@ package postgres
 
 import (
 	"database/sql"
-	log "erp/log"
+	log "erp/src/log"
 	"fmt"
 	"strings"
 
